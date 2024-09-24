@@ -1,5 +1,5 @@
--- **********************************************************************
--- Crear tabla authors
+-- *************************************** Table authors ***************************************
+
 CREATE TABLE authors
   (
   au_id    CHAR(3)     NOT NULL,
@@ -22,8 +22,8 @@ INSERT INTO authors VALUES('A07','Paddy','O''Furniture','941-925-0752','1442 Mai
 
 
 
--- **********************************************************************
--- Crear tabla publishers
+-- *************************************** Table publishers ***************************************
+
 CREATE TABLE publishers (
   pub_id   CHAR(3)     NOT NULL,
   pub_name VARCHAR(20) NOT NULL,
@@ -39,8 +39,8 @@ INSERT INTO publishers VALUES('P04','Tenterhooks Press','Berkeley','CA','USA');
 
 
 
--- **********************************************************************
--- Crear tabla new_publishers
+-- *************************************** Table new_publishers ***************************************
+
 CREATE TABLE new_publishers
   (
   pub_id   CHAR(3),
@@ -58,8 +58,8 @@ INSERT INTO new_publishers VALUES('P14','Springer','Berlin',NULL,'Germany');
 
 
 
--- **********************************************************************
--- Crear tabla titles
+-- *************************************** Table titles ***************************************
+
 CREATE TABLE titles (
   title_id   CHAR(3),
   title_name VARCHAR(40),
@@ -93,8 +93,8 @@ INSERT INTO titles VALUES('T13','What Are The Civilian Applications?','history',
 
 
 
--- **********************************************************************
--- Crear tabla title_authors
+-- *************************************** Table title_authors ***************************************
+
 CREATE TABLE title_authors (
   title_id      CHAR(3),
   au_id         CHAR(3),
@@ -129,8 +129,8 @@ INSERT INTO title_authors VALUES('T12','A02',1,1.0);
 INSERT INTO title_authors VALUES('T13','A01',1,1.0);
 
 
--- **********************************************************************
--- Crear tabla royalties
+-- *************************************** Table royalties ***************************************
+
 CREATE TABLE royalties (
   title_id     CHAR(3),
   advance      DECIMAL(9,2),
@@ -156,8 +156,8 @@ INSERT INTO royalties VALUES('T13',20000,0.06);
 
 
 
--- **********************************************************************
--- Crear tabla employees
+-- *************************************** Table employees ***************************************
+
 CREATE TABLE employees (
   emp_id   CHAR(3) PRIMARY KEY,
   emp_name VARCHAR(20),
@@ -170,8 +170,8 @@ INSERT INTO employees VALUES('E04','William Boot','E03');
 INSERT INTO employees VALUES('E05','Mr. Corker','E03');
 
 
--- **********************************************************************
--- Crear tabla test_score
+-- *************************************** Table test_scores ***************************************
+
 CREATE TABLE IF NOT EXISTS test_scores (
   name varchar(20),
   test varchar(20),
@@ -188,9 +188,8 @@ INSERT INTO test_scores VALUES
   ("Tracy", "Tuning", 88),
   ("Tatiana", "Tuning", 83);
 
+-- *************************************** Table dept ***************************************
 
--- **********************************************************************
--- Crear tabla dept
 CREATE TABLE IF NOT EXISTS dept (
     deptno          DECIMAL(2) PRIMARY KEY,
     dname           VARCHAR(14),
@@ -204,8 +203,7 @@ INSERT INTO dept VALUES (40,'OPERATIONS','BOSTON');
 
 
 
--- **********************************************************************
--- Crear tabla emp
+-- *************************************** Table emp ***************************************
 CREATE TABLE emp (
     empno           DECIMAL(4),
     ename           VARCHAR(10),
@@ -241,8 +239,7 @@ INSERT INTO emp VALUES
 
 
 
--- **********************************************************************
--- Crear tabla jobhist
+-- *************************************** Table jobhist ***************************************
 
 CREATE TABLE jobhist (
     empno           DECIMAL(4),
