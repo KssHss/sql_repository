@@ -1,5 +1,6 @@
 -- *************************************** Table authors ***************************************
 
+DROP TABLE authors if exists; 
 CREATE TABLE authors
   (
   au_id    CHAR(3)     NOT NULL,
@@ -24,6 +25,7 @@ INSERT INTO authors VALUES('A07','Paddy','O''Furniture','941-925-0752','1442 Mai
 
 -- *************************************** Table publishers ***************************************
 
+DROP TABLE publishers if exists; 
 CREATE TABLE publishers (
   pub_id   CHAR(3)     NOT NULL,
   pub_name VARCHAR(20) NOT NULL,
@@ -41,6 +43,7 @@ INSERT INTO publishers VALUES('P04','Tenterhooks Press','Berkeley','CA','USA');
 
 -- *************************************** Table new_publishers ***************************************
 
+DROP TABLE new_publishers if exists; 
 CREATE TABLE new_publishers
   (
   pub_id   CHAR(3),
@@ -60,6 +63,7 @@ INSERT INTO new_publishers VALUES('P14','Springer','Berlin',NULL,'Germany');
 
 -- *************************************** Table titles ***************************************
 
+DROP TABLE titles if exists; 
 CREATE TABLE titles (
   title_id   CHAR(3),
   title_name VARCHAR(40),
@@ -95,6 +99,7 @@ INSERT INTO titles VALUES('T13','What Are The Civilian Applications?','history',
 
 -- *************************************** Table title_authors ***************************************
 
+DROP TABLE title_authors if exists; 
 CREATE TABLE title_authors (
   title_id      CHAR(3),
   au_id         CHAR(3),
@@ -131,6 +136,7 @@ INSERT INTO title_authors VALUES('T13','A01',1,1.0);
 
 -- *************************************** Table royalties ***************************************
 
+DROP TABLE royalties if exists; 
 CREATE TABLE royalties (
   title_id     CHAR(3),
   advance      DECIMAL(9,2),
@@ -158,6 +164,7 @@ INSERT INTO royalties VALUES('T13',20000,0.06);
 
 -- *************************************** Table employees ***************************************
 
+DROP TABLE employees if exists; 
 CREATE TABLE employees (
   emp_id   CHAR(3) PRIMARY KEY,
   emp_name VARCHAR(20),
@@ -172,6 +179,7 @@ INSERT INTO employees VALUES('E05','Mr. Corker','E03');
 
 -- *************************************** Table test_scores ***************************************
 
+DROP TABLE test_scores if exists; 
 CREATE TABLE IF NOT EXISTS test_scores (
   name varchar(20),
   test varchar(20),
@@ -190,6 +198,7 @@ INSERT INTO test_scores VALUES
 
 -- *************************************** Table dept ***************************************
 
+DROP TABLE dept if exists; 
 CREATE TABLE IF NOT EXISTS dept (
     deptno          DECIMAL(2) PRIMARY KEY,
     dname           VARCHAR(14),
@@ -204,6 +213,8 @@ INSERT INTO dept VALUES (40,'OPERATIONS','BOSTON');
 
 
 -- *************************************** Table emp ***************************************
+
+DROP TABLE emp if exists; 
 CREATE TABLE emp (
     empno           DECIMAL(4),
     ename           VARCHAR(10),
@@ -241,6 +252,7 @@ INSERT INTO emp VALUES
 
 -- *************************************** Table jobhist ***************************************
 
+DROP TABLE jobhist if exists; 
 CREATE TABLE jobhist (
     empno           DECIMAL(4),
     startdate       DATE,
@@ -282,6 +294,9 @@ INSERT INTO jobhist VALUES (7900,'1981-12-03','1983-01-14','CLERK',950,NULL,10, 
 INSERT INTO jobhist VALUES (7900,'1983-01-15',NULL,'CLERK',950,NULL,30, 'Changed to Dept 30');
 INSERT INTO jobhist VALUES (7902,'1981-12-03',NULL,'ANALYST',3000,NULL,20, 'New Hire');
 INSERT INTO jobhist VALUES (7934,'1982-01-23',NULL,'CLERK',1300,NULL,10, 'New Hire');
+
+
+-- *************************************** Table jobhist ***************************************
 
 DROP TABLE IF EXISTS salgrade;
 CREATE TABLE salgrade
