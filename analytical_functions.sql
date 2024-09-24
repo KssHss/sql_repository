@@ -88,13 +88,11 @@ WHERE price >
   ( SELECT MIN( price ) FROM products ) ;
 
 
-
 SELECT DISTINCT price
 FROM products
 ORDER BY price
 LIMIT 1
 OFFSET 4 ;
-
 
 
 SELECT DISTINCT price
