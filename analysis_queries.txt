@@ -1,11 +1,5 @@
 
-Nombre: Kassite_Hassania
-
-Examen Data Analyst
-Getafe 13 de noviembre de 2023
-
-
-**************************************** Pregunta 1
+**************************************** Query 1 ****************************************
 
 Use analyst;
 
@@ -17,7 +11,7 @@ and month(order_date) = 04
 and day(order_date) = 06
 order by o.cust_id;
 
-para comprobar el numero de filas de la query:
+To check the number of rows of the previous query:
 
 select count(*)
 from (select distinct o.cust_id, c.fname, c.lname
@@ -29,7 +23,7 @@ and day(order_date) = 06
 order by o.cust_id) total;
 
 
-**************************************** Pregunta 2
+**************************************** Query 2 ****************************************
 
 Use default;
 
@@ -49,7 +43,7 @@ select first_name, last_name, address, city, state
 from analyst_loudacre.accounts_hive;
 
 
-**************************************** Pregunta 3
+**************************************** Query 3 ****************************************
 
 Use analyst;
 
@@ -65,7 +59,7 @@ order by display_date, display_site;
 
 
 
-**************************************** Pregunta 4
+**************************************** Query 4 ****************************************
 
 
 Use analyst;
@@ -81,7 +75,7 @@ having year(order_date) < 2011
 order by year, month;
 
 
-**************************************** Pregunta 5
+**************************************** Query 5 ****************************************
 
 Use analyst;
 
